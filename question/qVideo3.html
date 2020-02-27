@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <title>HIBUFFER A.I. INTERVIEW</title> 
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../css/questionrecord.css">
+    <link rel="stylesheet" href="../css/wave2.css">
+    
+    <script src="https://unpkg.com/@mattiasbuelens/web-streams-polyfill/dist/polyfill.min.js"></script>
+    <script src="https://www.webrtc-experiment.com/EBML.js"></script>
+    <script src="https://www.webrtc-experiment.com/DetectRTC.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://www.webrtc-experiment.com/common.js"></script>
+    
+    <script src="../js/wave.js"></script> 
+    <script src="../js/recorde.js"></script>    
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body >
+<center>
+    <div data-role="header" style="margin-bottom: 13vh;">
+        <img class="logo" src="../img/header-logo.png">
+    </div>
+    <div class="recordqes-content">        
+        <video class="video" controls autoplay playsinline ></video>
+            <div id="btn-start-recording" style="display: none;">
+                <button id="btn-start-recording">Start Recording</button>
+                <button id="btn-stop-recording" disabled>Stop Recording</button>
+            </div>
+        <p class="recordqes-content-p">
+            <span value="5" id="dro" style="color: #ffffff;">5</span>
+        </p>
+        <div class="header"></div>
+        <div class="canvas-wrap">
+            <canvas id="canvas"></canvas>
+            <p style="font-size:1.6vh">인공지능 <b><u>AIIS</u></b>가 목소리를 분석하고 있습니다.</p>
+        </div>
+        <a class="recordqes-a" href="../endInterView.html" data-ajax="false" >다음</a>
+    </div>
+</center>
+<script>
+$(document).ready(function(){
+    $("#btn-start-recording").trigger("click");
+});
+
+/* timer*/
+var dro = 5;
+var saboloo = 0;
+function setup(){
+    var es = $('#dro');
+    dro--;
+    es.html(dro);
+    if(dro == 0){
+        es.html(clearInterval(setupInterval));
+    }
+}
+var setupInterval = setInterval(setup, 1500);
+
+
+/* video */
+var video = document.querySelector('video');
+
+function captureCamera(callback) {
+navigator.mediaDevices
+    .getUserMedia({ audio: true, video: true })
+    .then(function(camera) {
+    callback(camera);
+    })
+    .catch(function(error) {
+    alert('Unable to capture your camera. Please check console logs.');
+    console.error(error);
+    });
+}
+
+// 녹화 종료 후 파일을 ftp서버로 전송하기
+function stopRecordingCallback() {
+    video.src = video.srcObject = null;
+    video.muted = false;
+    video.volume = 1;
+    // 여기서는 녹화 종료후 바로 비디오 태그에 src 속성에 녹화된 src를 입력하여 재생되게 만들어놓음
+    video.src = URL.createObjectURL(recorder.getBlob());
+
+    recorder.camera.stop();
+    recorder.destroy();
+    recorder = null;
+}
+
+var recorder; // globally accessible
+
+document.getElementById('btn-start-recording').onclick = function() {
+this.disabled = true;
+captureCamera(function(camera) {
+    video.muted = true;
+    video.volume = 0;
+    video.srcObject = camera;
+    console.log(video);
+
+    recorder = RecordRTC(camera, {
+    type: 'video'
+    });
+
+    recorder.startRecording();
+
+    // release camera on stopRecording
+    recorder.camera = camera;
+
+    document.getElementById('btn-stop-recording').disabled = false;
+    });
+};
+
+document.getElementById('btn-stop-recording').onclick = function() {
+    this.disabled = true;
+    recorder.stopRecording(stopRecordingCallback);
+};
+</script>
+
+</body>
+</html>

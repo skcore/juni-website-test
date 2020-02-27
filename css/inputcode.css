@@ -1,0 +1,23 @@
+.inputcode-content{
+    background-color: white; 
+    border:solid 0px; 
+    border-radius: 2rem; 
+    max-width: 73vw; 
+    height: 50vh;     
+}
+
+.inputcode-content-div{
+    font-size: 3.5vh; 
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.inputcode-content-a{
+    text-decoration: none; 
+    background-color: #fc8500; 
+    padding: 1vh 9vh; 
+    border-radius: 2em; 
+    font-size: 4vh; 
+
+}
+

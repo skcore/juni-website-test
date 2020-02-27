@@ -1,0 +1,69 @@
+.tipslide-content{
+    background-color: white; 
+    border:solid 0px; 
+    border-radius: 2rem; 
+    max-width: 70vw; 
+    height:fit-content; 
+    font-size: 4.0vh;
+    margin-top:-8vh;
+}
+
+.tipslide-img{
+    max-width: 30vh; 
+    position: relative;
+    display: block; 
+    margin-top: -30vh;
+}
+
+.tipslide-font{
+    font-size: 4.2vw;
+    position: absolute; 
+    top: 38vh; 
+    line-height: 7vw; 
+    font-weight: 600;
+}
+
+.tipslide-font-two{
+    position: absolute; 
+    top: 8vh; 
+    line-height: 7.5vw; 
+    font-weight: 600;
+    font-size: 6vw;
+}
+
+
+/* 슬라이드 기본 CSS */
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}

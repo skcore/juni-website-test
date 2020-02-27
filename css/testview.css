@@ -1,0 +1,62 @@
+.testview-content {
+    background-color: white;
+    margin-top: -8vh;
+    border:solid 0px;
+    border-radius:2rem; 
+    max-width: 83vw; 
+    height: 83vh;
+}
+
+.testview-img{
+    object-fit: fill;
+    display: flex; 
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 100%    !important;
+    height: 50vh   !important;
+}
+
+.testview-imgs{
+    display: flex; 
+    max-width: -webkit-fill-available;
+    margin-top: -4vh;  
+}
+
+.testview-content-p{
+    font-size: 3vh; 
+    background-color: black; 
+    border: solid black;
+    color: white;
+    opacity: 0.83;
+    margin-top: 0vh;
+    font-weight: 100;
+}
+
+.testview-a{
+    text-decoration: none; 
+    color: white; 
+    background-color: #fc8500; 
+    padding: 1vh 9vh; 
+    border-radius: 2em; 
+    font-size: 4vh; 
+}
+@media (min-height:810px){
+    .testview-content{
+        height:80vh;
+    }
+}
+
+@media (min-height:1000px){
+    .testview-imgs{
+        width: -webkit-fill-available;
+    }
+    .testview-content{
+        height: 87vh;
+    }
+}
+
+@media (min-height:1300px){
+    .testview-content{
+        height: 87vh;
+    }
+}

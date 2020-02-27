@@ -1,0 +1,48 @@
+
+.startinterview-content{
+    background-color: white;
+    border:solid 0px;border-radius: 2rem; 
+    max-width: 80vw; 
+    height: 43vh; 
+    padding-top: 10vh;
+    font-size: 5vw;
+    line-height: 7.5vw;
+    font-weight: 600;
+}
+
+.sti-content-font{
+    margin-bottom:13vh;
+
+}
+
+.sti-content-b{
+    font-weight: 600;
+    font-size: 3.7vh;
+    line-height: 2.7rem;
+}
+
+.sti-content-fonts{
+    margin-bottom: 20vw;
+
+}
+
+.sti-a{
+    text-decoration: none; 
+    color: white; 
+    background-color: #fc8500; 
+    padding: 1vh 9vh; 
+    border-radius: 2em; 
+    font-size: 7vw; 
+}
+
+@media (min-height:810px){
+    .sti-a{
+        padding: 0.3vh 15vw; 
+    }
+}
+
+@media (min-height:1000px){
+    .sti-content-font{
+        margin-bottom: 8vh;
+    }
+}

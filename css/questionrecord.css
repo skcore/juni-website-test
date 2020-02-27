@@ -1,0 +1,55 @@
+.recordqes-content {
+    background-color: white;
+    margin-top: -8vh;
+    border:solid 0px;
+    border-radius:2rem; 
+    max-width: 83vw; 
+    height: 83vh;
+}
+
+.recordqes-img{
+    object-fit: fill;
+    display: flex; 
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 100%    !important;
+    height: 50vh   !important;
+}
+
+.recordqes-imgs{
+    display: flex; 
+    max-width: -webkit-fill-available;
+    margin-top: -9vh;  
+}
+
+.recordqes-content-p{
+    font-size: 8vh; 
+    background-color: black; 
+    border: solid black;
+    color: white;
+    opacity: 0.83;
+    margin-top: 0vh;
+    font-weight: 100;
+}
+
+.recordqes-a{
+    text-decoration: none; 
+    color: white; 
+    background-color: #fc8500; 
+    padding: 1vh 9vh; 
+    border-radius: 2em; 
+    font-size: 4vh; 
+}
+.question-timer{
+    margin-top: -26vh; 
+    font-size: 10vh; 
+}
+
+@media (min-height:1000px){
+    .recordqes-imgs{
+        width: -webkit-fill-available;
+    }
+    .recordqes-content-p{
+        margin-top: -10vh;  
+    }
+}

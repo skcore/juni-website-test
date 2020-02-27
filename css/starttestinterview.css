@@ -1,0 +1,40 @@
+.starttestinterview-content{
+    background-color: white; 
+    border:solid 0px; 
+    border-radius: 2rem; 
+    max-width: 73vw; 
+    height: 50vh; 
+}
+
+.sti-content-font{
+    margin-top: 5vh;
+    margin-bottom:10vh;
+
+}
+
+.sti-content-b{
+    font-weight: 600;
+    font-size: 3.7vh;
+    line-height: 2.5rem;
+}
+
+.sti-content-fonts{
+    margin-bottom: 5vh;
+    font-size: 2.4vh;
+}
+
+
+.sti-a{
+    text-decoration: none; 
+    color: white; 
+    background-color: #fc8500; 
+    padding: 1vh 9vh; 
+    border-radius: 2em; 
+    font-size: 4vh; 
+}
+
+@media (max-width: 365px){ 
+    .sti-content-b{
+        line-height: 1.9rem;
+    }
+}

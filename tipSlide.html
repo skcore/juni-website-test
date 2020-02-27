@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <title>HIBUFFER A.I. INTERVIEW</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./js/swiper.min.js"></script>
+    
+    <link rel="stylesheet" href="./css/tipslide.css">
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<center>
+<div data-role="header" style="margin-bottom: 13vh;">
+    <img class="logo" src="./img/header-logo.png">
+</div>
+<div class="tipslide-content" data-role="content">
+  <div class="swiper-container" style="height:65vh;">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img class="tipslide-img" src="./img/slide_01.png">
+              <div class="tipslide-font">
+                  A.I.가 음질의 상태 및<br>
+                  발음정화도를 비교 분석해<br>
+                  현재 지원자의 응시환경이<br>
+                  적합한지를 판별하려고 합니다.<br>
+              </div>
+          </div>
+          <div class="swiper-slide">
+            <img class="tipslide-img" src="./img/slide_02.png">
+              <div class="tipslide-font">
+                  지원자가 면접을 응시할 수 있는<br>
+                  환경에 있다고 판단이 된다면<br>
+                  본격적 면접이 진행 될<br>
+                  예정입니다.<br>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="tipslide-font-two">
+                  다음 페이지로 넘어가<br>
+                  명시된 문장을<br>
+                  따라 읽으십시오.<br><br><br>
+                  <a href="testView.html" data-ajax="false" style= "text-decoration: none; color: white; background-color: #fc8500; padding: 10px 25%; border-radius: 2em; font-size: 3.0vh;z-index: 1;">다음</a>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
+  </div>
+</div>
+</center>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
+</html>

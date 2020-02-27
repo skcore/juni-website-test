@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <title>HIBUFFER A.I. INTERVIEW</title> 
+    <meta http-equiv="refresh" content="5; url=qVideo2.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <link rel="stylesheet" href="../css/askquestion.css">
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<style>
+  .blink{
+        opacity:0;
+        animation:backColor 2.3s;
+        position:absolute;
+        left:5vh;
+        width: 85vw;
+    }
+    @keyframes backColor{
+        from{ opacity:1; }
+        to{ opacity:0; }
+    }
+
+    .slide{
+        animation-duration: 2s;
+        animation-name: slidein;
+        animation-iteration-count:1;
+    }
+    @keyframes slidein {
+        from { margin-left: 100%; width:300%; }
+        to { margin-left: 0%; width: 100%; }
+    }
+</style>
+
+<body>
+<center>
+    <header data-role="header" style="margin-bottom: 13vh;">
+        <img class="logo" src="../img/header-logo.png">
+    </header>
+    <div class="question-content blink">
+        <p class="question-p">(2/12)</p>
+        <h1 class="question-h1">좋아하는 색상과</h1>
+        <h1 class="question-h1">이류를 말해보세요!</h1>
+    </div>
+    <div class="question-contents slide">
+        <p class="question-p">(2/12)</p>
+        <h3 class="question-h3">좋아하는 색상과</h3>
+        <h3 class="question-h3">이유를 말해보세요!</h3>
+        <div class="loader"></div>
+        <div class="text timer question-timer" >
+            <span class="c" id="5" style="color: #fc8500;"></span>
+        </div>
+    </div>
+</center>
+<script>
+    function c(){
+    var n=$('.c').attr('id');
+    var c=n;
+    $('.c').text(c);
+    setInterval(function(){
+        c--;
+        if(c>=0){
+            $('.c').text(c);
+        }
+        if(c==0){
+            $('.c').text(n);
+        }
+    },1100);
+}
+// Start
+c();
+
+// Loop
+setInterval(function(){
+    c();
+},5000);
+</script>    
+
+</body>
+</html>

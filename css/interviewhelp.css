@@ -1,0 +1,25 @@
+.interviewhelp-a{
+    z-index: 1;
+    left: 25%;
+    top: 83%;
+    position: absolute;
+    text-decoration: none; 
+    color: white; 
+    background-color: #fc850000;
+    padding: 7px 17%; 
+    border-radius: 2em; 
+    font-size: 4vh; 
+}
+
+.interviewhlep-ab{
+    z-index: 1;
+    left: 17%;
+    top: 82%;
+    position: absolute;
+    text-decoration: none; 
+    color: white; 
+    background-color: #fc850000;
+    padding: 7px 17%; 
+    border-radius: 2em; 
+    font-size: 4vh; 
+}
